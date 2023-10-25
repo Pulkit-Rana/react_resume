@@ -1,6 +1,6 @@
 // Navbar.js
 import React from 'react';
-import '../styles/Navbar.css';
+import '../styles/Navbar.css'; 
 import ProfileInfo from './ProfileInfo';
 import ContactInfo from './ContactInfo';
 

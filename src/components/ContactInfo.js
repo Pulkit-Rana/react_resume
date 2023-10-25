@@ -5,7 +5,7 @@ const ContactInfo = () => {
   return (
     <div className="contact-info">
       <p>Email: your.email@example.com</p>
-      <p>Phone: (123) 456-7890</p>
+      <p>Phone: (+91) 7906428380</p>
       <div className="social-icons">
         {/* Add your social media icons here */}
         <i className="fa fa-facebook"></i>
