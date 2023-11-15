@@ -1,13 +1,11 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-
+import Header from './components/Header/Header';
 function App() {
   return (
-    <div className="App">
-    {/* Other content in your app */}
-    <Navbar />
-    {/* More content */}
-  </div>
+    <>
+      <div className='App'>
+        <Header />
+      </div >
+    </>
   );
 }
 
