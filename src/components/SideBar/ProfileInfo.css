@@ -13,8 +13,8 @@
   transition: box-shadow 0.3s ease-in-out;
   background-color: #b7b7b7;
   box-shadow: 0px 40px 50px rgba(32, 29, 42, 0.75) !important;
-  width: 30%;
-  margin: 0 auto;
+  width: 25%; /* Adjusted width to 25% */
+  margin-top: 8%;
 }
 
 .profile h2 {

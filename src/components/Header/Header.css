@@ -1,0 +1,42 @@
+.header {
+  position: sticky;
+  flex: 2;
+  padding: 15px;
+  background-color: #111111;
+  border-radius: 8px;
+  margin-top: 4%;
+  margin-left: 400px;
+  margin-right: 100px;
+  height: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Add display: flex to the header */
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px; /* Adjust spacing between links */
+    padding: 10px;
+    border-radius: 9px; /* Adjust the border-radius to control the roundness */
+    background: linear-gradient(to right, #FA5252, #DD2476);/* Adjust the background color as needed */
+    position: relative;
+    width: 70px; /* Adjust the width as needed */
+    height: 85px;
+}
+
+.text-xl {
+    text-align: center;
+    color: white;
+}

@@ -4,7 +4,6 @@ import './ProfileInfo.css'
 
 const ProfileInfo = () => {
     return (
-        
         <div className='profile'>
             <div className='avtar-block' >
                 <img src={profilePhoto} alt='Profile Pic' />
