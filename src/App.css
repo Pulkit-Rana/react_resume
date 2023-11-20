@@ -1,7 +1,22 @@
 
 .container {
+  display: grid;
+  grid-template-areas:
+    'profileInfo header'
+    'profileInfo hero';
   max-width: 92%;
   display: flex;
   padding: 0px;
   background-color: transparent;
+  overflow: hidden;
+}
+
+.button{
+  border-radius: 34px;
+  border:  none;
+  color: white;
+  font-size: 16px;
+  padding: 11px 26px 11px 26px;
+  background: linear-gradient();
+  box-shadow: 0px 20px 24px 3px;
 }

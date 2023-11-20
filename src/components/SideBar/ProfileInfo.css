@@ -1,6 +1,6 @@
 .profile {
+  grid-area: profileInfo;
   text-align: center;
-  -webkit-text-size-adjust: 100%;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   color: #000000;
@@ -9,7 +9,6 @@
   padding-bottom: 0 !important;
   border-radius: 20px;
   padding: 1.875rem;
-  position: relative;
   transition: box-shadow 0.3s ease-in-out;
   background-color: #b7b7b7;
   box-shadow: 0px 40px 50px rgba(32, 29, 42, 0.75) !important;

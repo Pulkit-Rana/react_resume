@@ -1,3 +1,19 @@
-.hero{
-    display:flexbox;
+.hero {
+    padding: 25px;
+    background-color: #111111;
+    border-radius: 8px;
+    
 }
+
+.hero-text {
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+  }
+  
+
+
+  .hero-image {
+    flex: 1;
+  }
