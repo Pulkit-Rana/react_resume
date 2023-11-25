@@ -1,0 +1,48 @@
+.progress-bar {
+  box-sizing: border-box;
+  width: 160px;
+  height: 160px;
+  position: relative;
+  background: transparent;
+}
+
+.outer-circle {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.inner-ciricle {
+  height: 120px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+#number {
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 15px;
+  stroke-dasharray: 457;
+  stroke-dashoffset: 457;
+  animation: ani 1s linear forwards;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes ani {
+  100% {
+    stroke-dashoffset: var(--dash-offset);
+  }
+}

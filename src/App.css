@@ -1,22 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+body {
+  margin: 0;
+  font-family: "Raleway", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: var(--image-gradient), url(./assets/images/home-bg.jpg);
+}
 
+html {
+  --section-background-color: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.582),
+    rgba(12, 8, 24, 0.904)
+    
+  );
+
+  --image-gradient: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.678),
+    rgba(12, 10, 22, 0.863)
+    
+  );
+
+  --imp-text-color: #c770f0;
+}
 .container {
-  display: grid;
-  grid-template-areas:
-    'profileInfo header'
-    'profileInfo hero';
-  max-width: 92%;
   display: flex;
+  max-width: 95%;
   padding: 0px;
   background-color: transparent;
   overflow: hidden;
+  margin-top: 5%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  
 }
 
 .button{
   border-radius: 34px;
   border:  none;
-  color: white;
+  color: rgb(5, 1, 1);
   font-size: 16px;
-  padding: 11px 26px 11px 26px;
-  background: linear-gradient();
-  box-shadow: 0px 20px 24px 3px;
+  padding: 2%;
+  background: linear-gradient(#FFFFFF, #fdc50f);
+  box-shadow: 0px 20px 24px 3px
 }
+
