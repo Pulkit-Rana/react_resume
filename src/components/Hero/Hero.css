@@ -2,8 +2,8 @@
   display: flex;
   background-color: #f7f7f7;
   border-radius: 8px;
-  margin-top: 4%;
-  height: 85vh;
+  margin-top: 3%;
+  height: 100vh;
 }
 
 .hero-text {
@@ -26,8 +26,8 @@
 }
 
 .hero-name > :nth-child(2) {
-  color: rgb(47, 90, 22);
-  font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
   font-size: 3rem;
 }
 
@@ -47,14 +47,15 @@
 
 /* Need to add animation */
 .hero-name > :nth-child(3) {
-  color: rgb(216, 241, 202);
-  font-weight: 100;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
   font-size: 14px;
+
 }
 
 .hero-name > :nth-child(4) {
-  color: rgb(216, 241, 202);
-  font-weight: 100;
+  color: rgb(0, 0, 0);
+  font-weight: Bold;
   font-size: 14px;
   margin-top: 10px;
 }
@@ -83,20 +84,20 @@
 
 .hero-image > * {
   position: absolute;
-  z-index: 1;
+  
 }
 .hero-image > :nth-child(1) {
   transform: scale(0.69);
-  left: -15%;
+  left: -18%;
   top: -9%;
 }
 .hero-image > :nth-child(2) {
   top: -4.6rem;
-  transform: scale(0.67);
-  left: -3rem;
+  transform: scale(0.55);
+  left: -9rem;
 }
 .hero-image > :nth-child(3) {
-  transform: scale(1.4);
+  transform: scale(1.04);
   left: 28%;
 }
 .hero-image > :nth-child(4) {

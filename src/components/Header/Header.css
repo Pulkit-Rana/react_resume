@@ -1,23 +1,21 @@
 .header {
-  grid-area: header;
+  background-color: #171111;
+  border-radius: 10px;
+  width: 36%;
+  margin-left: auto;
+}
+
+.header.sticky {
   position: sticky;
-  flex: 2;
-  padding: 15px;
-  background-color: #111111;
-  border-radius: 8px;
-  margin-top: 4%;
-  margin-left: 400px;
-  margin-right: 100px;
-  height: 120px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  align-items: center;
+  top: 0%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
 }
 
 .nav-item {
   display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  margin: px;
+  padding: 1%;
   list-style: none;
 }
 
@@ -27,7 +25,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #333;
+  color: #000000;
   margin: 0 10px; /* Adjust spacing between links */
   padding: 10px;
   border-radius: 9px; /* Adjust the border-radius to control the roundness */

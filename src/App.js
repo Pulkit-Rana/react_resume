@@ -4,25 +4,24 @@ import './App.css'
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 import Skills from "./components/Skills/Skills";
+import { WorkExp } from "./components/WorkExp/WorkExp";
+import { Projects } from "./components/Projects/Projects";
 
 function App() {
   return (
-    // Remove main class at the end.
     <main>
-      {/* container bg color is white turn to black to see change. */}
-      <section className="container">
-        <div className="col-3">
+      <div className="container">
+        <div className="col-md-3">
           <ProfileInfo />
         </div>
-        <div className="col-9">
+        <div className="col-md-9">
           <Header />
           <Hero />
           <Skills />
+          <WorkExp />
+          <Projects />
         </div>
-      </section>
-      <section className="S">
-       
-      </section>
+      </div>
     </main>
   )
 }

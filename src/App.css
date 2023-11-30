@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 body {
-  margin: 0;
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,18 +23,19 @@ html {
 
   --imp-text-color: #c770f0;
 }
+
 .container {
   display: flex;
-  max-width: 95%;
-  padding: 0px;
-  background-color: transparent;
-  overflow: hidden;
+  max-width: 92%;
+  background-color:transparent;
   margin-top: 5%;
-  background-position: top center;
-  background-repeat: no-repeat;
-  
 }
-
+.col-md-3 {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .button{
   border-radius: 34px;
   border:  none;

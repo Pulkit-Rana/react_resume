@@ -15,7 +15,7 @@ const Skills = () => {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
             items: 3,
-            
+
 
         },
         tablet: {
@@ -28,64 +28,70 @@ const Skills = () => {
         }
     };
     return (
-        <section className='skills'>
-            <div className='skills-text'>
-                <h1>Skills</h1>
-                <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
+        <section className='row skills'>
+            <div className='col-7'>
+                <div className='skills-text'>
+                    <h1>Skills</h1>
+                    <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
+                </div>
+                <Carousel responsive={responsive} infinite={true} className='skill-slider' >
+
+                    <div className='item'>
+                        <ProgressBar targetProgress={65} />
+                    </div>
+                    <div className='item'>
+                        <ProgressBar targetProgress={75} />
+                    </div>
+                    <div className='item'>
+                        <ProgressBar targetProgress={80} />
+                    </div>
+                    <div className='item'>
+                        <ProgressBar targetProgress={85} />
+                    </div>
+
+                    <div className='item'>
+                        <ProgressBar targetProgress={99} />
+                    </div>
+                    <div className='item'>
+                        <ProgressBar targetProgress={99} />
+                    </div>
+                </Carousel>
+
+                <Carousel responsive={responsive}
+                    infinite={true}
+                    showDots={true}
+                    autoPlay={true}
+                    autoPlaySpeed='1230'
+                    removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+                    itemClass="carousel-item-padding-40-px"
+                    dotListClass="custom-dot-list-style"
+                    focusOnSelect={true}
+                    className='skill-slider'
+                >
+
+                    <div className='item'>
+                        <ProgressBar targetProgress={65} />
+                    </div>
+                    <div className='item'>
+                        <ProgressBar targetProgress={75} />
+                    </div>
+                    <div className='item'>
+                        <ProgressBar targetProgress={80} />
+                    </div>
+                    <div className='item'>
+                        <ProgressBar targetProgress={85} />
+                    </div>
+                    <div className='item'>
+                        <ProgressBar targetProgress={99} />
+                    </div>
+                    <div className='item'>
+                        <ProgressBar targetProgress={99} />
+                    </div>
+                </Carousel >
             </div>
-            <Carousel responsive={responsive} infinite={true} className='skill-slider' >
-
-                <div className='item'>
-                    <ProgressBar targetProgress={65} />
-                </div>
-                <div className='item'>
-                    <ProgressBar targetProgress={75} />
-                </div>
-                <div className='item'>
-                    <ProgressBar targetProgress={80} />
-                </div>
-                <div className='item'>
-                    <ProgressBar targetProgress={85} />
-                </div>
-
-                <div className='item'>
-                    <ProgressBar targetProgress={99} />
-                </div>
-                <div className='item'>
-                    <ProgressBar targetProgress={99} />
-                </div>
-            </Carousel>
-
-            <Carousel responsive={responsive}
-                infinite={true}
-                showDots={true}
-                autoPlay={true}
-                autoPlaySpeed='1230'
-                removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-                itemClass="carousel-item-padding-40-px"
-                dotListClass="custom-dot-list-style"
-                focusOnSelect={true}
-                className='skill-slider' >
-
-                <div className='item'>
-                    <ProgressBar targetProgress={65} />
-                </div>
-                <div className='item'>
-                    <ProgressBar targetProgress={75} />
-                </div>
-                <div className='item'>
-                    <ProgressBar targetProgress={80} />
-                </div>
-                <div className='item'>
-                    <ProgressBar targetProgress={85} />
-                </div>
-                <div className='item'>
-                    <ProgressBar targetProgress={99} />
-                </div>
-                <div className='item'>
-                    <ProgressBar targetProgress={99} />
-                </div>
-            </Carousel >
+            <div className='col-3'>
+                <h1>Tools I use</h1>
+            </div>
         </section>
     )
 }

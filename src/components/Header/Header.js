@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Header.css'
 import { HomeIcon } from '../../utils/HomeIcon'
 import { ResumeIcon } from '../../utils/ResumeIcon'
@@ -7,32 +7,52 @@ import { BlogIcon } from '../../utils/BlogIcon'
 import { ContactIcon } from '../../utils/ContactIcon'
 
 export const Header = () => {
+
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 10) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
     return (
-        <div className='header'>
+        <div className={`header ${isSticky ? 'sticky' : ''}`}>
             <ul className="nav-item">
                 <a href='www.google.com'>
                     <span className='text-xl mb-1'>
-                        <HomeIcon/>Home
+                        <HomeIcon />Home
                     </span>
                 </a>
                 <a href='www.google.com'>
                     <span className='text-xl mb-1'>
-                        <ResumeIcon/>Resume
+                        <ResumeIcon />Resume
                     </span>
                 </a>
                 <a href='www.google.com'>
                     <span className='text-xl mb-1'>
-                        <WorkIcon/>Work
+                        <WorkIcon />Work
                     </span>
                 </a>
                 <a href='www.google.com'>
                     <span className='text-xl mb-1'>
-                        <BlogIcon/>Blogs
+                        <BlogIcon />Blogs
                     </span>
                 </a>
                 <a href='www.google.com'>
                     <span className='text-xl mb-1'>
-                        <ContactIcon/>Contact
+                        <ContactIcon />Contact
                     </span>
                 </a>
             </ul>
