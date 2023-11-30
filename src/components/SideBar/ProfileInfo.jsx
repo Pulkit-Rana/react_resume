@@ -4,22 +4,25 @@ import "./ProfileInfo.css";
 
 const ProfileInfo = () => {
     const [isSticky, setIsSticky] = useState(false);
-    const [avatarOffset, setAvatarOffset] = useState(0);
-  
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      setIsSticky(offset > 140);
-  
-      // Adjust the offset value as needed for a smoother transition
-      setAvatarOffset(Math.max(0, 140 - offset));
+  const [avatarOffset, setAvatarOffset] = useState(0);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    setIsSticky(offset > 140);
+
+    // Adjust the offset value as needed for a smoother transition
+    setAvatarOffset(Math.max(0, 140 - offset));
+  };
+
+  useEffect(() => {
+    const initialOffset = window.scrollY;
+    handleScroll(); // Initialize state based on initial scroll position
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
-  
-    useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
+  }, []);
   return (
     <div className={`profile ${isSticky ? 'sticky' : ''}`}>
       <div className="avatar-block" style={{ marginTop: `-${avatarOffset}px` }}>
