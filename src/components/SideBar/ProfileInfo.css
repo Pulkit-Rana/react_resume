@@ -1,47 +1,90 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
 .profile {
   text-align: center;
-  border-radius: 20px;
-  background-color: #e8e8e8;
-  box-shadow: 0px 40px 50px rgba(45, 15, 145, 0.75) !important;
-  width: 335px; 
-  margin-top: 140px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 117px auto;
   position: relative;
   transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile.sticky {
   position: sticky;
   top: 4%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .avatar-block {
   position: relative;
-  height: 240px;
-  border-radius: 20px;
+  height: 250px; /* Increased height for larger image */
+  width: 250px; /* Increased width for larger image */
   margin-top: -120px;
 }
 
 .avatar-block img {
-  border-radius: 20%;
-  width: 200px;
+  background-image: url("../../assets/images/user.jpg");
+  border-radius: 50%; /* Adjusted radius for larger image */
+  width: 200px; /* Increased width for larger image */
+  height: 200px; /* Increased height for larger image */
+  object-fit: cover;
   position: absolute;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
+.profile-content {
+  padding: 20px; /* Added padding for better spacing */
+}
 
-.profile h2 {
+.profile h1 {
   text-transform: uppercase;
-  color: #0d0101;
-  font-size: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: -30px;
+}
+
+.jobtitles {
+  /* Additional styles to ensure proper positioning and rotation of text */
+  perspective: 1000px;
+}
+
+.jobtitles .text-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.jobtitles p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  line-height: 0%;
   font-weight: bold;
 }
 
-.cd-headline.loading-bar b {
-  font-size: medium;
+.jobtitles p:nth-child(2) {
+  color: #ffcc00;
+  font-weight: bold;
 }
 
-.cd-headline.loading-bar .cd-words-wrapper::after {
-  background: linear-gradient(to right, #20047c, #337426);
+/* Hover Effect */
+.profile:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }

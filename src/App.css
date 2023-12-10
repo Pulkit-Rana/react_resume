@@ -3,7 +3,7 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: var(--image-gradient), url(./assets/images/home-bg.jpg);
+  /* background-image: var(--image-gradient), url(./assets/images/home-bg.jpg); */
 }
 
 html {

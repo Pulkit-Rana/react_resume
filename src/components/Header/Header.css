@@ -2,7 +2,7 @@
   background-color: #171111;
   border-radius: 10px;
   width: 36%;
-  margin-left: auto;
+  margin-left:  auto;
 }
 
 .header.sticky {
@@ -13,33 +13,43 @@
 }
 
 .nav-item {
-  display: flex;
-  margin: px;
+  display: flex; /* Changed 'inline-block' to 'flex' for equal spacing */
+  justify-content: space-between; /* Added for equal spacing between items */
+  margin: 0; /* Removed unnecessary margin */
   padding: 1%;
   list-style: none;
 }
 
 .nav-item a {
-  gap: 3rem;
   display: flex;
+  flex-direction: column; /* Stack image and text vertically */
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center content in each box */
   text-decoration: none;
   color: #000000;
-  margin: 0 10px; /* Adjust spacing between links */
   padding: 10px;
-  border-radius: 9px; /* Adjust the border-radius to control the roundness */
+  border-radius: 9px;
   background: linear-gradient(
     to right,
     #fa5252,
     #dd2476
-  ); /* Adjust the background color as needed */
-  position: sticky;
-  width: 70px; /* Adjust the width as needed */
+  );
+  position: relative; /* Added relative positioning for image centering */
+  width: 70px;
   height: 85px;
+}
+
+.nav-item a img {
+  position: absolute; /* Changed position for image centering */
+  top: 50%; /* Vertically center image */
+  left: 50%; /* Horizontally center image */
+  transform: translate(-50%, -50%); /* Translate image to center */
+  width: auto; /* Maintain aspect ratio */
+  height: 50%; /* Adjust image size as needed */
 }
 
 .text-xl {
   text-align: center;
   color: white;
+  margin-top: auto; /* Add space between image and text */
 }
