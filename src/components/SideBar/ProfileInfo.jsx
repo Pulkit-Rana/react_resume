@@ -3,6 +3,9 @@ import gsap from "gsap";
 import SplitTextJS from "split-text-js";
 import profilePhoto from "../../assets/images/user.jpg";
 import "./ProfileInfo.css";
+import Github from "../../assets/images/github.png";
+import LinkedIn from "../../assets/images/linkedin.png";
+import Instagram from "../../assets/images/instagram.png";
 
 const ProfileInfo = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -28,12 +31,12 @@ const ProfileInfo = () => {
       const titles = gsap.utils.toArray(textWrapper.querySelectorAll("p"));
       const staggerDuration = 0.03;
       const radius = 200; // Adjust this value to control the 3D effect depth
-  
+
       const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-  
+
       titles.forEach((title) => {
         const splitTitle = new SplitTextJS(title);
-  
+
         // Animate each character
         tl.from(splitTitle.chars, {
           opacity: 0,
@@ -73,12 +76,15 @@ const ProfileInfo = () => {
       });
     }
   }, [textRef]);
-  
 
   return (
     <div className={`profile ${isSticky ? "sticky" : ""}`}>
       <div className="avatar-block" style={{ marginTop: `-${avatarOffset}px` }}>
-        <img src={profilePhoto} alt="Profile Pic" onError={(e) => e.target.src = "fallback_image.png"} />
+        <img
+          src={profilePhoto}
+          alt="Profile Pic"
+          onError={(e) => (e.target.src = "fallback_image.png")}
+        />
       </div>
       <div className="profile-content">
         <h1>Pulkit Rana</h1>
@@ -90,9 +96,43 @@ const ProfileInfo = () => {
           </div>
         </div>
       </div>
+      <div className="contact-details">
+        <ul>
+          <li>
+            <span>Experience:</span>
+            <span>5 Years</span>
+          </li>
+          <li>
+            <span>Email:</span>
+            <span>pulkitrana@example.com</span>
+          </li>
+          <li>
+            <span>Location:</span>
+            <span>New Delhi, India</span>
+          </li>
+          <li>
+            <span>Birthday:</span>
+            <span>1990-01-01</span>
+          </li>
+          <li>
+            <span>Skype ID:</span>
+            <span>pulkitrana.skype</span>
+          </li>
+        </ul>
+      </div>
+      <div className="hero-icons">
+        <a href="">
+          <img src={Github} alt="Social" />
+        </a>
+        <a href="">
+          <img src={LinkedIn} alt="Social" />
+        </a>
+        <a href="">
+          <img src={Instagram} alt="Social" />
+        </a>
+      </div>
       {/* Replace "Insert Timeline" with your actual content */}
-      <div className="profile_info">
-        </div>
+      <div className="profile_info"></div>
       <button>My Button</button>
     </div>
   );

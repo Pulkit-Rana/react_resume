@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .profile {
@@ -14,7 +13,7 @@ body {
   border-radius: 15px;
   background-color: #f5f5f5;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 350px;
   margin: 117px auto;
   position: relative;
   transition: box-shadow 0.3s ease-in-out;
@@ -32,55 +31,57 @@ body {
 
 .avatar-block {
   position: relative;
-  height: 250px; /* Increased height for larger image */
-  width: 250px; /* Increased width for larger image */
+  height: 250px; /* Height for image placement */
+  width: 250px; /* Width for image placement */
   margin-top: -120px;
 }
 
 .avatar-block img {
-  background-image: url("../../assets/images/user.jpg");
-  border-radius: 50%; /* Adjusted radius for larger image */
-  width: 200px; /* Increased width for larger image */
-  height: 200px; /* Increased height for larger image */
+  border-radius: 20%; /* Adjust radius for desired image shape */
+  width: 200px; /* Adjust width for desired image size */
+  height: 200px; /* Adjust height for desired image size */
   object-fit: cover;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .profile-content {
-  padding: 20px; /* Added padding for better spacing */
+  padding: 29px; /* Padding for spacing */
 }
 
 .profile h1 {
   text-transform: uppercase;
   color: #333;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 28px;
+  font-weight: bolder;
   margin-top: -30px;
 }
 
 .jobtitles {
-  /* Additional styles to ensure proper positioning and rotation of text */
-  perspective: 1000px;
+  /* Additional styles for proper positioning and rotation of text */
+  perspective: 100px;
+  background-color: #000; /* Dark background for job titles */
+  padding: 16px; /* Padding for spacing within the box */
+  border-radius: 5px; /* Border radius for box */
+  color: white; /* White text for job titles */
+  position: relative;
 }
 
 .jobtitles .text-wrapper {
   position: relative;
-  transform-style: preserve-3d;
 }
 
 .jobtitles p {
   font-size: 1rem;
-  color: #555;
   margin: 0;
-  line-height: 0%;
+  line-height: 0; /* Reduce line-height for overlapping effect */
   font-weight: bold;
-}
-
-.jobtitles p:nth-child(2) {
-  color: #ffcc00;
-  font-weight: bold;
+  /* Add absolute positioning and set top, left, and transform for overlapping effect */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* Hover Effect */
